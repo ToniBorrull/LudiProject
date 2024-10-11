@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         {
             SpeedUp();
         }
+        Time.timeScale = 0.5f;
         
     }
 
