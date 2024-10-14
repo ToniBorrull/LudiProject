@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     bool leftObject;
     bool rightObject;
 
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(speed * Time.fixedDeltaTime, 0, 0);
+        transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
         if (Input.GetButtonDown("Jump"))
         {
             Jump();
@@ -51,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         {
             SpeedUp();
         }
-        Time.timeScale = 0.5f;
+        Time.timeScale = 1f;
         
     }
 
